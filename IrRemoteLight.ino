@@ -26,8 +26,6 @@ void setup() {
 	irrecv.enableIRIn(); // Start the receiver
 	light = new Light();
 	ircode = new IRcode();
-	//ircode->cfg.code = 333;
-  // EEPROM_writeAnything(81, ircode->cfg);	
    EEPROM_readAnything(81,ircode->cfg); //read configuration from EEPROM
    Serial.println(ircode->cfg.code);
 }
